@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<title>H5GG-Silent Pro Tool</title>
+
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+<script>
+    
+    if(typeof $ == 'undefined') alert("Network connection failed, please restart!");
+    
+    $(document).ready(function(){
+        //alert();
+        //Binding menu click to switch subpages
+        $("div.menubox").click(function(){
+            $("div.menubox").removeClass("current");
+            $("div.menuview").removeClass("current");
+            $(this).addClass("current");
+            
+            var menuid = $(this).attr("menu");
+            $("div#"+menuid).addClass("current");
+        });
+        
+     //Disable text selection and dragging
+        document.body.onselectstart = document.body.ondrag =function(){ 
+            return false;
+        }
+        
+        $("input").blur(function(){
+            window.scroll(0,0); //The page automatically scrolls to the top after entering the text box and so on
+        });
+        
+        //激活webkit的button:active
+        document.body.addEventListener('touchstart', function () {});
+
+    //设置菜单体高度 = 页面总高 - 标题高度
+    $("#bodyView").height(document.body.offsetHeight - $('#titleBar')[0].offsetHeight);
+    
+    if(typeof h5gg!='undefined') {
+setWindowDrag(700,0, 300, 50);
+//setWindowRect(700,0,330,250);
+
+setWindowRect(700,0,350,300);
+setButtonImage('https://toppng.com/uploads/preview/yao-ming-meme-png-asian-guy-meme-laughing-black-and-white-2-piece-dual-11563010870nljzhxp0m4.png');
+//setButtonImage("https://i.imgur.com/zMMu8Kk.png");
+    }
+}
+)
+
+//
+
+function Coordinatef() {
+    h5gg.clearResults();
+    h5gg.searchNumber('1088784512', 'I32', '0x00000000', '0x200000000'); 
+    h5gg.searchNearby('12', 'I32', '0x8');
+    h5gg.searchNumber('1088784512', 'I32', '0x00000000', '0x400000000');
+    h5gg.getResults("200", "F32");
+    count = h5gg.getResultsCount();
+    a = h5gg.getResults(count);
+    i=0;
+    count = h5gg.getResultsCount();
+    a = h5gg.getResults(count);
+    for (var i = 0; i < count; i++) {
+    addr = a[i].address;
+    addr2=addr - -0x4C;
+    addrplx1 = "0x"+addr2.toString(16);
+    plxva=h5gg.getValue(addrplx1,"F32")
+    if (plxva != 1.14794e-41){
+    if (plxva != 0){
+    if (plxva <= 342300){
+    if (plxva >= -342300){
+    addrply2=addrplx1 - -0x4
+    addrply1 = "0x"+addrply2.toString(16)
+    addrplz2=addrplx1 - -0x8
+    addrplz1 = "0x"+addrplz2.toString(16)
+    plyva=h5gg.getValue(addrply1,"F32")
+    plzva=h5gg.getValue(addrplz1,"F32")
+    Flags1=1
+    }}}}
+    }
+var plxva=h5gg.getValue(addrplx1,"F32")
+var plyva=h5gg.getValue(addrply1,"F32")
+var plzva=h5gg.getValue(addrplz1,"F32")
+alert("Your position is\r\nX="+plxva+"\r\nY="+plyva+"\r\nZ="+plzva)
+} 
+
+		function buttonclick(input)
+		{
+			alert("按钮点击 = "+input.innerText);
+		}
+	
+		function checkboxclick(input)
+		{
+			alert("多选点击 = "+input.parentElement.innerText+" = "+input.checked);
+		}
+   
+		function rangechange(input)
+		{
+			alert("滑块改变 = "+input.value);
+		}
+	
+		function radioclick(input)
+		{
+			alert("单选点击: 选择组 = "+input.name+" = "+input.parentElement.innerText+" = "+input.value);
+		}
+
+function speedf(input) {
+  if (typeof speedaddr === 'undefined'){
+  h5gg.clearResults();
+  h5gg.searchNumber("6.798361019377807e-06", 'F64', '0x00000000', '0x200000000');
+  h5gg.searchNearby("0.4", 'F32', '0x200');
+  h5gg.searchNearby("1", 'F32', '0x100');
+  h5gg.searchNumber("1", 'F32', '0x10', '0x00000000', '0x200000000');
+  h5gg.getResults('1', '0');
+count0 = h5gg.getResultsCount();
+r0 = h5gg.getResults(count0);
+for (var i = 0; i < count0; i++) {
+speedaddr = r1[i].address;
+var speedaddr = h5gg.getValue();
+h5gg.setValue(speedaddr, input.value, 'F32');
+	}
+}
+else {
+	h5gg.getValue(speedaddr,"F32");
+    h5gg.setValue(speedaddr, input.value, 'F32');
+}}
+
+function playerspeedf(input) {
+  if (typeof addr10 === 'undefined'){
+    h5gg.clearResults();
+    h5gg.searchNumber("-2373.004", 'F32', '0x00000000', '0x200000000');
+    h5gg.searchNearby("1", 'F32', '0x100');
+    h5gg.searchNumber("1", 'F32', '0x00000000', '0x200000000');
+    h5gg.getResults('1', '0');
+    count10 = h5gg.getResultsCount();
+    r10 = h5gg.getResults(count10);
+    for (var i = 0; i < count10; i++) {
+      var addr10 = r10[i].address;
+      h5gg.setValue(addr10, input.value / 2, 'F32');
+    }
+  }
+  else {
+    h5gg.setValue(addr10, input.value / 2, 'F32');
+  }}
+            
+//fz view
+function Fzviewf(input) {
+if (typeof fzaddr === 'undefined'){
+  h5gg.clearResults();
+h5gg.searchNumber("256", 'F32', '0x00000000', '0x200000000');
+h5gg.searchNearby("4", 'I32', '0x20');
+h5gg.searchNearby('0.8', 'F32', '0x20'); 
+h5gg.searchNumber("256", 'F32', '0x00000000', '0x200000000');
+h5gg.getResults('1', '0');
+count2 = h5gg.getResultsCount();
+        r2 = h5gg.getResults(count2);
+for (var i = 0; i < count2; i++) {
+          fzaddr = r2[i].address;
+          h5gg.clearResults();
+h5gg.setValue(fzaddr, input.value * 80, 'F32');
+}}
+else{
+h5gg.clearResults();
+h5gg.setValue(fzaddr, input.value * 80, 'F32');
+}
+}
+
+//normal fov
+function fovf(input) {
+if (typeof addr4 === 'undefined'){
+    h5gg.clearResults();
+h5gg.searchNumber('90', 'F32', '0x00000000', '0x200000000');
+h5gg.searchNearby('7', 'F32', '0x3e8');
+h5gg.searchNumber('90', 'F32', '0x00000000', '0x200000000');
+h5gg.getResults('1', '0');
+count4 = h5gg.getResultsCount();
+        r4 = h5gg.getResults(count4);
+for (var i = 0; i < count4; i++) {
+          addr4 = r4[i].address;
+h5gg.setValue(addr4, input.value, 'F32');
+}}
+else{
+h5gg.clearResults();
+h5gg.setValue(addr4, input.value, 'F32');
+}
+}
+
+function nightvision(input) {
+if (typeof addrv === 'undefined'){
+h5gg.clearResults();
+h5gg.searchNumber('17.98999977112', 'F32', '0x00000000', '0x200000000');
+h5gg.searchNearby('0.40000000496', 'F32', '0x100');
+h5gg.searchNumber('0.40000000496', 'F32', '0x00000000', '0x200000000');
+h5gg.getResults('1', '0');
+count4 = h5gg.getResultsCount();
+r4 = h5gg.getResults(count4);
+for (var i = 0; i < count4; i++) {
+addrv = r4[i].address;
+h5gg.setValue(addrv, input.value, 'F32');
+}}
+else{
+h5gg.clearResults();
+h5gg.setValue(addrv, input.value, 'F32'); 
+}
+}
+
+function nightvisionOn() {
+h5gg.clearResults();
+h5gg.searchNumber('17.98999977112', 'F32', '0x10000000', '0x200000000');
+h5gg.searchNearby('0.40000000496', 'F32', '0x100');
+h5gg.searchNumber('0.4', 'F32', '0x10000000', '0x200000000');
+h5gg.getResults('1', '0');
+count4 = h5gg.getResultsCount();
+r4 = h5gg.getResults(count4);
+for (var i = 0; i < count4; i++) {
+var addrv = r4[i].address;
+h5gg.setValue(addrv, "25", "F32");
+}
+}
+
+function nightvisionOff() {
+h5gg.clearResults();
+h5gg.setValue(addrv, "0.4", "F32");
+}
+
+//bighead button
+function dat3() {
+                if (typeof addr3 === 'undefined'){
+                    h5gg.clearResults();
+                    h5gg.searchNumber('3232863993', 'I32', '0x00000000', '0x160000000');
+                    h5gg.searchNearby('1', 'F32', '0x10');
+                    h5gg.searchNumber('1', 'F32', '0x00000000', '0x160000000');
+                    h5gg.getResults('100', '0');
+                    count3 = h5gg.getResultsCount();
+                    r3 = h5gg.getResults(count3);
+                    dat = prompt("Input Size (1,12,20,50)"); 
+                    for (var i = 0; i < count3; i++) {
+                        addr3 = r3[i].address;
+                        h5gg.setValue(addr3, dat, 'F32');
+                                                    }}
+                    else{
+                    dat = prompt("Input Size (1,12,20,50)");  
+                	h5gg.setValue(addr3, dat, 'F32');
+                    }
+                    }
+    
+    // antennaf checkbox        
+    function antennaf(a) {
+            if (a.checked == true || (typeof addr12 === 'undefined')) {
+                h5gg.clearResults();
+                h5gg.searchNumber('-5.140667156606297e-315', 'F64', '0x10000000', '0x200000000');
+                h5gg.getResults('2', '0');
+                count12 = h5gg.getResultsCount();
+                r12 = h5gg.getResults(count12);
+                for (var i = 0; i < count12; i++) {
+                addr12 = r12[i].address;
+                h5gg.setValue(addr12, '7.186329346908974e+45', 'F64');
+                								   }
+                h5gg.clearResults();
+                h5gg.searchNumber('-0.98875373602', 'F32', '0x10000000', '0x200000000');
+                h5gg.searchNearby('-6.874347686909405e-41', 'F64', '0x8');
+                h5gg.searchNumber('-6.874347686909405e-41', 'F64', '0x10000000', '0x200000000');
+                h5gg.getResults('2', '0');
+                count13 = h5gg.getResultsCount();
+                r13 = h5gg.getResults(count13);
+                for (var i = 0; i < count13; i++) {
+                    addr13 = r13[i].address;
+                    h5gg.setValue(addr13, '-6.874346696665740e-41', 'F64');
+                									}
+                          		  } else {
+              h5gg.setValue(addr12, '-5.140667156606297e-315', 'F64');
+          	h5gg.setValue(addr22, '-6.874347686909405e-41', 'F64');
+                                          }
+                            }
+
+function norecoil() {
+h5gg.clearResults();
+h5gg.searchNumber('8.5', 'F32', '0x100000000', '0x200000000');
+h5gg.searchNearby('1', 'F32', '0x3e8');
+h5gg.searchNumber('1', 'F32', '0x100000000', '0x200000000');
+h5gg.editAll('0.0000000001', 'F32');
+alert("No Recoil Set");
+h5gg.clearResults();
+}
+
+function tiltrt() {
+    h5gg.clearResults();
+    h5gg.searchNumber('90', 'F32', '0x10000000', '0x200000000');
+    h5gg.searchNearby('90', 'F32', '0x100');
+    h5gg.editAll('50', 'F32');
+}
+
+function tiltrtoff() {
+    h5gg.clearResults();
+    h5gg.searchNumber('50', 'F32', '0x10000000', '0x200000000');
+    h5gg.searchNearby('50', 'F32', '0x100');
+    h5gg.editAll('90', 'F32');
+}
+function rtrange() {
+            h5gg.clearResults();
+            h5gg.searchNumber('0.1285700053', 'F32', '0x100000000', '0x160000000');
+            h5gg.searchNearby('0.2', 'F32', '0x50');
+            h5gg.editAll('30', 'F32');
+        }
+        
+function spam() {
+  alert("auto clicker will start with this button");
+h5gg.clearResults();
+h5gg.searchNumber('1074020928', 'I32', '0x00000000', '0x200000000');
+h5gg.searchNearby("1", 'F32', '0x50');
+h5gg.searchNumber("1", 'F32', '0x00000000', '0x200000000');
+h5gg.editAll("30", 'F32');
+h5gg.clearResults();
+h5gg.searchNumber('-2052', 'F32', '0x00000000', '0x200000000');
+h5gg.searchNearby("1", 'F32', '0x50');
+h5gg.searchNumber("1", 'F32', '0x00000000', '0x200000000');
+}
+
+function underwatershoot() {
+h5gg.searchNumber("6", 'F32', '0x100000000', '0x200000000');
+h5gg.searchNearby("1", 'F32', '0x500');
+h5gg.searchNumber("1.0", "F32", '0x100000000', '0x160000000');
+h5gg.editAll("4.1","F32");
+}
+
+function underwatershootOff() {
+h5gg.searchNumber("2.1", 'F32', '0x100000000', '0x200000000');
+h5gg.editAll("1.0","F32");
+}
+
+</script>
+<style type="text/css">
+
+  html {
+      zoom: 0.7; /* Display the overall magnification 1.2 times on the mobile phone */
+      overflow-x: none;
+      overflow-y: hidden;
+      background-color: black;
+      opacity: 0.9;
+  }
+  
+  body {
+      width: 100%;
+      min-width: 350px;
+      max-height: 300px;
+      margin:0;
+  }
+  * {
+  /*Default text color*/
+  color: white;
+  font-size: 14px;
+  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif; 
+  }
+  
+  *:not(input,checkbox,textarea) {
+      /*disable text seection*/
+     -webkit-touch-callout: none;
+     -webkit-user-select: none;
+     user-select: none; /* Non-prefixed version, currently */
+     outline: none;
+     -webkit-tap-highlight-color: transparent;
+  }
+  
+  button {
+      height: 30px;
+      background-color: #c2c6cb;
+      color: #000;
+      display: block;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      margin: 10;
+      outline-width: thin;
+      border: width 4px;
+      border-color: #2F7DCDF0;
+      border-radius: 5px;
+  }
+  
+  button:active {
+       transform: translateY(2px); 
+  }
+  
+  input[type=radio]  {
+      width:20px;
+      height:20px;
+      margin-right:6px;
+      border:none;
+      outline-style:none;
+      -webkit-appearance:none;
+      vertical-align:middle;
+      border:1px solid #DDDDDDF0;
+      border-radius:50%;
+  }
+  input[type=radio]:checked {
+      border:6px solid #2F7DCDF0;
+      background:#FFFFFF;
+  }
+      
+  input[type=checkbox]{
+   visibility: hidden;
+   vertical-align:middle; margin-bottom:2px;
+   cursor: pointer;
+   display: inline-block;
+   width: 26px;
+   height: 26px;
+  }
+  input[type=checkbox]::after{
+   position: relative;
+   top: 0;
+   margin-top:2px;
+   width: 18px; height: 18px;
+   border: 1px solid #EEEEEE;
+   border-radius: 3px;
+   background-color: rgba(0,0,0,0);
+   display: inline-block;
+   visibility: visible;
+   text-align: center;
+   content: ' ';
+  }
+  input[type=checkbox]:checked::after{
+   content: "✓";
+   border-color: #4498F7;
+   background-color: #000000;
+   font-size: 14px;
+   font-weight: bold;
+  }
+  
+  input[type=range] {
+    -webkit-appearance: none;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    height: 15px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #01264a;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    border: 1px solid #000000;
+    height: 18px;
+    width: 16px;
+    border-radius: 3px;
+    background: #FFFFFFE0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -2px;
+  }
+  
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #01264a;;
+  }
+  
+  .slider {
+    position: absolute;
+    right: 0;
+    width: 220px;
+  }
+  
+  input[type="range"] { 
+      margin: 2;
+      -webkit-appearance: none;
+      position: relative;
+      overflow: hidden;
+      height: 50x;
+      width: 220px;
+      cursor: pointer;
+      border-radius: 5; /* iOS */
+  }
+  
+  ::-webkit-slider-runnable-track {
+      background: #01264a;
+  }
+  
+  /*
+   * 1. Set to 0 width and remove border for a slider without a thumb
+   * 2. Shadow is negative the full width of the input and has a spread 
+   *    of the width of the input.
+   */
+  ::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 30px; /* 1 */
+      height: 30px;
+      background: rgb(203, 220, 220);
+      box-shadow: -200px 0 0 200px #80C0FF; /* 2 */
+      border: 1px solid #0D1224; /* 1 */
+  }
+  
+  /* 滚动条整体部分 */
+  .scrollbar {
+  
+      -webkit-overflow-scrolling: touch;
+  }
+  .scrollbar::-webkit-scrollbar {
+      width: 5px; /* 纵向滚动条宽度 */
+      height: 5px;/* 横向滚动条高度 */
+      background-color: #F5F5F5; /* 滚动条整体背景，一般被覆盖着 */
+  }
+  /* 滚动条的轨道（里面装有Thumb） */
+  .scrollbar::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); /* 滚动条轨道阴影 */
+      /*border-radius: 10px; /* 滚动条轨道圆角 */
+      background-color: #F5F5F5; /* 滚动条轨道背景 */
+  }
+  /* 滚动条里面的滑块 */
+  .scrollbar::-webkit-scrollbar-thumb {
+      border-radius: 15px; /* 滚动条滑块圆角 */
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); /* 滚动条滑块阴影 */
+      background-color: #B8B8B8; /* 滚动条滑块颜色 */
+  }
+      
+  .menubox {
+          width: 80px;
+          height: 50px;
+          line-height: 50px; /*height和line-height设置一样即可文字垂直居中*/
+          text-align:center;
+          margin: 5;
+          background-color: #0d223c;
+  }
+  .menubox.current {
+      background-color: #275da3a5;
+      color: white;
+      font-weight: strong;
+      opacity: 1.0;
+  }
+  
+  .menuview {
+      display:none;
+  }
+  
+  .menuview.current {
+    display:inline-block;
+      overflow-x: auto;
+      overflow-y: hidden;
+      min-width: 300px;
+      padding: 5px;
+      margin: 5px;
+      /*alignment-adjust:justify*/
+  }
+  
+  .grid-container {
+    display: grid;
+    position: relative;
+    grid-template-columns: auto;
+    grid-template-rows: 50px 50px 50px 50px 50px;
+    gap: 2px;
+    background-color:black;
+    padding: 80, 4, 4, 10;
+  }
+  
+  .grid-container > div {
+    background-color: black;
+    text-align: end;
+    position: right;
+    padding: 80, 4, 4, 10;
+    font-size: 12x;
+  }
+  </style>
+
+<div id="titleBar" style="background-color:#01264a; color: #f6f6f6; font-weight: 500; font-size: 16px; height:33px; padding: 5 px; margin:2px; text-align: middle; padding-top: 6px; text-indent: 60px; letter-spacing: 3px;">silent-pro-tool+</div>
+</head>
+<body margin="0">
+
+<table id="bodyView">
+  <tr>
+<td style="vertical-align:top">
+  <div>
+    <div class="menubox current" menu="menu1">Main</div>
+    <div class="menubox" menu="menu2">Setup</div>
+    <div class="menubox" menu="menu3">Spam</div>
+    <div class="menubox" menu="menu4">Misc</div>
+    <div class="menubox" menu="menu5">(C)</div>
+  </div>
+</td>
+<td width="100%" style="vertical-align:top">
+
+<div id="menu1" class="menuview current">
+<div id="gridmain" class="grid-container">
+  <div><label>Global Speed:  </label><input type="range" id="sli1" min="1" max="9" step="0.1" value="1" class="slider" onchange="setTimeout(speedf(this), 500)" /></div>
+  <div><label>Player Speed:  </label><input type="range" id="sli4" min="1" max="10" step="0.01" value="1" class="slider" onchange="setTimeout(playerspeedf(this), 500)" /></div>
+  <div><label>View:  <input type="range" id="sli3" min="35" max="150" step="1" value="90" class="slider" onchange="setTimeout(fovf(this), 1000)"></input></label></div>  
+  <div><label>Zoom:  <input type="range" id="sli2" min="10" max="70" step="1" value="10" class="slider" onchange="setTimeout(Fzviewf(this), 1000)"></input></label></div>
+<div style="display:inline-flex; padding:5 0 0 5; margin:5 0 0 5;"><input type="checkbox" onclick="antennaf(this)">Antenna</input><button height="" onclick="dat3()">Big Head</button><button onclick="nightvisionOn()">Night On</button><button onclick="nightvisionOff()">Night Off</button></div>
+</div>
+</div>
+
+<div id="menu2" class="menuview">
+    <button onclick="underwatershoot()">Underwater Shooting On</button>
+    <button onclick="underwatershoot()">Underwater Shooting Off</button>
+    <button onclick="NoRecoil()">No Recoil</button>
+    <p></p>
+    <button onclick="NewPlayerSkin()">New Player Color</button>
+    <button onclick="NewPlayerSkin()">New Player Hair</button>
+</div>
+
+<div id="menu3" class="menuview">
+    <button onclick="spam()">Spam On</button>
+    <button onclick="rtrange()">Extended Range</button>
+    <p>
+    <button onclick="tiltrt()">Tilt Turret</button>
+    <button onclick="tiltrtoff()">Tilt Off</button>
+    <p>
+    <button onclick="buttonclick()">Auto Clicker</button>
+</div>
+
+<div id="menu4" class="menuview">
+    <p>Nothing working yet</p>
+            <!--   <label><input name="radio-group1" type="radio" value="1" checked onclick="radioclick(this)" />Antenna's</label>
+            <p><label><input name="radio-group1" type="radio" value="2"  onclick="radioclick(this)" />Players On</label>
+            <p><label><input name="radio-group1" type="radio" value="3"  onclick="radioclick(this)" />Players Off</label>
+            <p>more nonsense</p>
+            <label><input name="radio-group2" type="radio" checked="checked"  onclick="radioclick(this)" />Big Head</label>
+            <p><label><input name="radio-group2" type="radio"  onclick="radioclick(this)" />Big Head On</label>
+            <p><label><input name="radio-group2" type="radio"  onclick="radioclick(this)" />选择3</label>
+            <p>some more decisions</p>
+            <label><input name="radio-group3" type="radio" checked="checked"  onclick="radioclick(this)" />选择1</label>
+            <p><label><input name="radio-group3" type="radio"  onclick="radioclick(this)" />选择2</label>
+            <p><label><input name="radio-group3" type="radio"  onclick="radioclick(this)" />选择3</label> -->
+</div>
+
+<div id="menu5" class="menuview">
+	<h4>Made by SilentNinjaBee</h4>
+	<br>
+	<br>
+	<br>
+<p>v1.0 Freeware and Open Source</p>
+<br>
+https://github.com/silentninjabee
+</div>
+
+
+
+</td>
+</tr>
+
+</table>
+</body>
+</html>
+
